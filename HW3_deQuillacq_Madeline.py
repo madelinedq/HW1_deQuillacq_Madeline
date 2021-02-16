@@ -1,21 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[63]:
+# In[65]:
 
 
 marks = {'Andy':88, 'Amy':66, 'James': 90, 'Jules': 55, 'Arthur': 77}
 marks
 
 
-# In[64]:
+# In[66]:
 
 
 for student, marks in marks.items():
     print(f' {student} {marks}')
 
 
-# In[55]:
+# In[67]:
 
 
 students_marks = [88, 66, 90, 55, 77]
@@ -31,7 +31,7 @@ print("The maximum mark equals", max(students_marks))
 print("The minimum mark equals", min(students_marks))
 
 
-# In[49]:
+# In[68]:
 
 
 for marks in ['Andy', 'Amy', 'James', 'Jules', 'Arthur']:
@@ -40,7 +40,7 @@ for marks in ['Andy', 'Amy', 'James', 'Jules', 'Arthur']:
     print(marks)
 
 
-# In[50]:
+# In[69]:
 
 
 for marks in ['Andy', 'Amy', 'James', 'Jules', 'Arthur']:
@@ -49,7 +49,7 @@ for marks in ['Andy', 'Amy', 'James', 'Jules', 'Arthur']:
     print(marks)
 
 
-# In[61]:
+# In[70]:
 
 
 def print_student (student_name):
