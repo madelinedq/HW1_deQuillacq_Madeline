@@ -1,0 +1,81 @@
+mat1 = matrix(c(7,9,12,2,4,13),nrow=2,ncol=3,byrow=TRUE)
+mat2 = matrix(c(1,7,12,19,2,8,13,20,3,9,14,21), nrow=3,ncol=4,byrow=TRUE)
+print(mat1)
+print(mat2)
+print(mat1 %*% mat2 )
+
+Data_Frame <- data.frame (
+  id = c(1, 2, 3, 4, 5),
+  name = c("Peter", "Amy", "Ryan", "Gary", "Michelle"),
+  salary = c(623.30, 515.20, 611.00, 729.00, 843.25)
+)
+
+department <- c("IT", "Finance", "Marketing", "Human Resources", "Public Relations")
+Data_Frame$department <- department
+
+
+Data_Frame <- Data_Frame[-c(1, 3, 5), -c(2, 3)]
+
+
+x2 <- c("Peter", "Gary", "Michelle")
+y2 <- c(623.30, 729.00, 843.25)
+barplot(y2, names.arg = x2)
+
+
+Data_Frame <- data.frame (
+  id = c(1, 2, 3, 4, 5),
+  name = c("Peter", "Amy", "Ryan", "Gary", "Michelle"),
+  salary = c(623.30, 515.20, 611.00, 729.00, 843.25)
+  
+  
+  mylabel <- c('highest salary', 'lowest salary', 'median salary')
+  colors <- c('red', 'yellow', 'green', 'blue')
+  
+  maxS <- max(Data_Frame$salary)
+  minS <- min(Data_Frame$salary)
+  medianS <- median(Data_Frame$salary)
+  x3 <- c(maxS, minS, medianS)
+  
+  pie(x3, label = mylabel, main = "Salary Statistics", col = colors)
+  
+  legend("topleft", mylabel, fill = colors)
+  
+  get_color <- function(a) {
+    if (a == 'red'){
+      return (col=c("#FF3300"))
+    } else if (a == 'white'){
+      return (col=c("#FFFFFF"))
+    } else if (a == 'blue'){
+      return (col=c("#3333FF"))
+    } else {
+      return (col=c("#000000"))
+    }
+  }
+  
+  install.packages("TurtleGraphics")
+  library("TurtleGraphics")
+  
+  x4 = -(height/20)-(0.75*height)
+  y4 = 0.75*height 
+  draw_starrows <- function(a, b) {
+    turtle_init()
+    for (i in 1:5) {
+      x4 = x4 + (a/8.696)
+      turtle_up()
+      turtle_col(col="white")
+      turtle_down()
+      turtle_forward(a/32.5)
+      turtle_left(144)
+      turtle_forward(a/32.5)
+      turtle_left(144)
+      turtle_forward(a/32.5)
+      turtle_left(144)
+      turtle_forward(a/32.5)
+      turtle_left(144)
+      turtle_forward(a/32.5)
+      turtle_left(144)
+    }
+  }
+  
+  draw_starrows(height, height/1.43)
+  
